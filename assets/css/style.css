@@ -1,0 +1,19 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    border-radius: 0.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#map {
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.table-responsive {
+    max-height: 300px;
+    overflow-y: auto;
+}

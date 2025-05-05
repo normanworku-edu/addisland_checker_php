@@ -1,0 +1,16 @@
+property_number: 
+owner_name_amharic: of1
+owner_name_english: 
+title_deed_number: CSV (comma delimited)
+date_issued: 
+transfer_type_amharic: 
+transfer_type_english: 
+possession_type_amharic: 
+possession_type_english: 
+sub_city_amharic: Plot Code
+sub_city_english: 
+folder_number: የካርታ ቁጥርTitle deed No.
+coordinates:
+  - [Addis Ababa City Government Land Development and AdministrationBureau Title Deed Certificate, የንብረት ቁጥርProperty No]
+  - [Addis Ababa City Government Land, Property No]
+  - [Development and AdministrationBureau, Possessor’s full name]
