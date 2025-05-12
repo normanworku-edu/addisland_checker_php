@@ -3,6 +3,7 @@
 ## Overview
 EthioLand Checker is a web application designed to help users verify land title deeds across Ethiopian regions and locate land parcels on Google Maps using official title numbers or XY coordinates.
 
+![EthioLand Checker](./ethiolandcheck_app.png)
 ---
 
 ## Main Features
