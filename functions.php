@@ -55,6 +55,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $centerLon = array_sum($lons) / count($lons);
                     $googleMapHref = generateGoogleMapsLink($centerLat, $centerLon);
 
+
+
                     // Generate coordinates table
                     $tableRows = '';
                     foreach ($lats as $i => $lat) {
@@ -108,11 +110,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         // Prepare JSON response
         header('Content-Type: application/json');
+
         die(json_encode([
             'isSuccess' => $isSuccess ?? false,
-            'validityMessage' => $validityMessage ?? '',
-            'coordinatesTable' => $coordinatesTable ?? '',
-            'mapData' => $mapData ?? null,
+            'lats' => $lats ?? null,
+            'lons' => $lons ?? null,
+            'centerLat' => $centerLat ?? null,
+            'centerLon' => $centerLon ?? null,
             'addislandHref' => $addislandHref ?? '',
             'googleMapHref' => $googleMapHref ?? ''
         ]));// Terminate script after JSON output
@@ -127,7 +131,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 }
-
 function extractCoordinates($titleDeedNumber)
 {
     // Trim whitespace from input

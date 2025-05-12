@@ -1,10 +1,9 @@
+<?php
+    require_once 'functions.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EthioLand Checker</title>
@@ -16,10 +15,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-
-    <?php
-    require_once 'functions.php';
-    ?>
     <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/style.css">
 
 </head>
@@ -31,12 +26,57 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10 col-xl-8">
 
+                    <header class="text-center my-5 py-4 bg-light rounded shadow-sm border border-success">
+                        <div class="container">
+                            <a href="index.php" class="text-decoration-none text-dark">
+                                <h1 class="display-5 fw-bold text-success mb-3">
+                                    🌍 EthioLand Checker
+                                </h1>
+                            </a>
+                            <p class="lead text-secondary">
+                                Verify land title deeds across <strong>Ethiopian regions</strong> and locate land parcels on <strong>Google Maps</strong> using official title numbers or XY coordinates.
+                            </p>
+                            <!--
+                            <p class="text-muted small">
+                                Powered by data from the <a href="https://www.addisland.gov.et/" target="_blank" class="text-decoration-none">AddisLand Portal</a> and supports regional inputs like Oromia, Amhara, Tigray, and more.
+                            </p>
+                            -->
+                        </div>
+                    </header>
+
+                    <!--
                     <header class="text-center m-4">
                         <h1>Welcome to EthioLand Checker</h1>
-                        <p class="lead">Check validity and get google map location of land coordinates in Ethiopia using
-                            title deed
-                            numbers or Just XY coordinates.</p>
+                        <p class="lead">Check validity of land title deeds in Ethiopia and get google map location from XY land coordinates.</p>
                     </header>
+
+                    <header class="text-center my-5 py-4 bg-light rounded shadow-sm">
+                        <div class="container">
+                            <h1 class="display-5 fw-bold text-primary mb-3">🌍 EthioLand Checker</h1>
+                            <p class="lead text-secondary">
+                                Easily verify land title deeds across Ethiopia and get precise locations on Google Maps using XY coordinates.
+                            </p>
+                        </div>
+                    </header>
+
+
+                    <header class="text-center my-5 py-4 bg-light rounded shadow-sm border border-success">
+                        <div class="container">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Flag_of_Ethiopia.svg" 
+                                alt="Ethiopian Flag" width="60" class="mb-3">
+                            <h1 class="display-5 fw-bold text-success">
+                                EthioLand Checker
+                            </h1>
+                            <p class="lead text-secondary">
+                                Verify land title deeds across <strong>Ethiopian regions</strong> and locate land parcels on <strong>Google Maps</strong> using official title numbers or XY coordinates.
+                            </p>
+                            <p class="text-muted small">
+                                Powered by data from the <a href="https://www.addisland.gov.et/" target="_blank" class="text-decoration-none">AddisLand Portal</a>.
+                            </p>
+                        </div>
+                    </header>
+                    -->
+
 
                     <div class="card shadow-sm mb-4 w-100">
                         <div class="card-header bg-primary text-white">
@@ -48,8 +88,7 @@
                             <form method="POST" id="coordinateForm">
                                 <div class="mb-3">
                                     <label for="region" class="form-label fw-bold">Select Region</label>
-                                    <select class="form-select" id="region" name="region" required
-                                        onchange="updateInputField()">
+                                    <select class="form-select" id="region" name="region" required>
                                         <option value="" disabled>Select a region</option>
                                         <option value="Addis Ababa" selected>Addis Ababa</option>
                                         <option value="Afar">Afar</option>
@@ -70,12 +109,13 @@
 
                                 <div class="mb-3" id="input_type_container">
                                     <label for="input_type" class="form-label fw-bold">Input Type</label>
-                                    <select class="form-select" id="input_type" name="input_type"
-                                        onchange="updateInputField()">
+                                    <select class="form-select" id="input_type" name="input_type">
                                         <option value="title_deed" selected>Title Deed Number</option>
                                         <option value="coordinates">XY Coordinates</option>
                                     </select>
                                 </div>
+
+
 
                                 <div class="mb-3">
                                     <label for="title_deed" class="form-label fw-bold" id="input_label">Enter Title Deed
@@ -119,7 +159,7 @@
                                 <h5 class="mb-0"><i class="bi bi-geo-alt-fill me-2"></i>Map View</h5>
                             </div>
                             <div class="card-body p-0">
-                                <div id="map" style="height: 500px; width: 100%;">
+                                <div id="map" style="height: 300px; width: 100%;">
 
                                 </div>
                             </div>
